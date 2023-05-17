@@ -80,7 +80,7 @@ namespace InvestApi.Controllers
             _context.Ordem.Add(ordem);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetOrdem", new { id = ordem.id }, ordem);
+            return CreatedAtAction(nameof(GetOrdem), new { id = ordem.id }, ordem);
         }
 
         // DELETE: api/Ordens/5
